@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="screen_sides_margin_half">8dip</dimen>
+    <dimen name="screen_sides_margin">16dip</dimen>
+
+    <dimen name="list_item_margin">10dip</dimen>
+
+    <!--BUTTON-->
+    <dimen name="button_height">50dip</dimen>
+    <dimen name="drawable_button_stroke">2dip</dimen>
+
+</resources>

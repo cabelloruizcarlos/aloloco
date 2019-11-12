@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/screen_sides_margin_half"
+    android:background="@drawable/custom_alert_shape"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/alert_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/screen_sides_margin"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:lineSpacingExtra="5dp"
+        android:gravity="center"
+        android:textSize="26sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/alert_dialog_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/screen_sides_margin"
+        android:layout_marginEnd="@dimen/screen_sides_margin"
+        android:layout_marginBottom="@dimen/screen_sides_margin"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/screen_sides_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/alert_dialog_first_btn"
+            style="@style/WhiteButton"
+            android:layout_width="0dp"
+            android:textAllCaps="true"
+            android:layout_marginEnd="@dimen/list_item_margin"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/alert_dialog_second_btn"
+            style="@style/WhiteButton"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/list_item_margin"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+</LinearLayout>

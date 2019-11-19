@@ -4,7 +4,7 @@ import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import es.ccrr.aloloco.util.AlertDialogCallback
 
-public class BaseFragment: Fragment() {
+open class BaseFragment: Fragment() {
 
     private fun existActivityObject(): Boolean {
         return activity as BaseActivity != null
@@ -21,24 +21,8 @@ public class BaseFragment: Fragment() {
             (activity as BaseActivity).showToast(message)
     }
 
-    fun showAlert(
-        title: String,
-        message: String,
-        primaryBtn: String,
-        secondaryBtn: String,
-        forceAnswer: Boolean,
-        callback: AlertDialogCallback,
-        secondaryCallback: AlertDialogCallback
-    ) {
+    fun showAlert(title: String, message: String, primaryBtn: String, secondaryBtn: String, forceAnswer: Boolean, callback: AlertDialogCallback? = null, secondaryCallback: AlertDialogCallback? = null) {
         if (existActivityObject())
-            (activity as BaseActivity).showAlert(
-                title,
-                message,
-                primaryBtn,
-                secondaryBtn,
-                forceAnswer,
-                callback,
-                secondaryCallback
-            )
+            (activity as BaseActivity).showAlert(title, message, primaryBtn, secondaryBtn, forceAnswer, callback, secondaryCallback)
     }
 }

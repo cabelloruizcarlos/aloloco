@@ -7,7 +7,7 @@ import es.ccrr.aloloco.util.AlertDialogCallback
 import es.ccrr.aloloco.util.DialogUtil
 import es.ccrr.aloloco.util.Util
 
-public class BaseActivity: AppCompatActivity() {
+open class BaseActivity: AppCompatActivity() {
 
     //TODO: Add a spinner to be use along the app
 
@@ -16,7 +16,7 @@ public class BaseActivity: AppCompatActivity() {
         Util.freeMemory()
     }
 
-    public fun showToast(message: String){
+    fun showToast(message: String){
         DialogUtil.showToast(this, message)
     }
 

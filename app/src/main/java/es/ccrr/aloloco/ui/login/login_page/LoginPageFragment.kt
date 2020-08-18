@@ -17,46 +17,57 @@ class LoginPageFragment : BaseFragment(), LoginPageContract.LoginPageView, Login
 
     private lateinit var presenter: LoginPagePresenter
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        presenter = LoginPagePresenter(this, arguments, activity as BaseActivity)
+        presenter = LoginPagePresenter(this, arguments)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.login_page, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        activity?.let { activity ->
+        activity?.let { baseActivity ->
             // FireBase BugFixing: RuntimeException - ActivityThread.performLaunchActivity(Attempt to invoke interface method 'android.view.Display android.view.WindowManager.getDefaultDisplay()' on a null object reference Util.java:203; FilterItemListFragment.java:87)
             val screenWidth = presenter.getScreenWidth()
             if (screenWidth == 0)
-                activity.onBackPressed()
+                baseActivity.onBackPressed()
 
-            if (!presenter.isLoginLayoutShown())
+            if (!presenter.isLoginLayoutShown()) {
                 forgotPasswordView.visibility = View.GONE
+                loginLabel.text = baseActivity.getString(R.string.login_join_title)
+                loginBtn.text =  baseActivity.getString(R.string.login_join_btn_text)
                 // Dependencies.trackScreen("join_screen")
-            else
+            } else {
                 forgotPasswordView.visibility = View.VISIBLE
+                loginLabel.text = baseActivity.getString(R.string.login_title)
+                loginBtn.text =  baseActivity.getString(R.string.login_btn_text)
                 // Dependencies.trackScreen("login_screen")
-
+            }
 
             if (!TextUtils.isEmpty(presenter.getEmail()))
                 emailView.setText(presenter.getEmail())
 
             loginBtn.setOnClickListener {
-                if (Util.isOnline(activity)) {
-                    showProgressDialog()
-                    presenter.doAPICall(arrayOf(emailView.getText(), passwordView.getText()))
+
+                if (Util.isOnline(baseActivity)) {
+                    if (presenter.isValid(emailView.getText(), passwordView.getText())) {
+                        showProgressDialog()
+                        presenter.doAPICall(arrayOf(emailView.getText(), passwordView.getText()))
+                    } else {
+                        if (TextUtils.isEmpty(emailView.getText()))
+                            emailView.showWrongInput()
+                        if (TextUtils.isEmpty(passwordView.getText()) || passwordView.getText().length <= 8)
+                            passwordView.showWrongInput()
+                    }
                 } else {
-                    showAlert("Hold Up", activity.getString(R.string.error_offline), "Ok", "", true)
+                    showAlert("Hold Up", baseActivity.getString(R.string.error_offline), "Ok", "", true)
                 }
             }
         }
@@ -65,7 +76,7 @@ class LoginPageFragment : BaseFragment(), LoginPageContract.LoginPageView, Login
 
     /* Listeners */
     override fun getData(): String {
-        return presenter.getEmail()
+        return emailView.getText()
     }
 
     override fun updateData(value: String) {
@@ -76,6 +87,7 @@ class LoginPageFragment : BaseFragment(), LoginPageContract.LoginPageView, Login
         }
     }
 
+
     /* Getters & Setters */
     override fun getWindowManager(): WindowManager? {
         return activity?.windowManager
@@ -84,12 +96,11 @@ class LoginPageFragment : BaseFragment(), LoginPageContract.LoginPageView, Login
 
     companion object {
 
-        fun newInstance(page: String, email: String = ""): LoginPageFragment {
+        fun newInstance(page: String): LoginPageFragment {
             val fragment = LoginPageFragment()
 
             val bundle = Bundle()
             bundle.putString("page", page)
-            bundle.putString("email", email)
             fragment.arguments = bundle
 
             return fragment

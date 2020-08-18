@@ -14,6 +14,7 @@ interface LoginPageContract {
         fun isLoginLayoutShown(): Boolean
         fun getEmail(): String
         fun setEmail(email: String)
+        fun isValid(email: String, password: String): Boolean
     }
 
     interface LoginPageModel{

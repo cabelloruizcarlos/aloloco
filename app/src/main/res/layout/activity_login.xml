@@ -13,16 +13,16 @@
         android:layout_marginBottom="@dimen/screen_sides_margin"
         android:background="@android:color/transparent" />
 
-    <ImageView
-        android:id="@+id/mCloseBtn"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/screen_sides_margin"
-        android:layout_marginEnd="@dimen/screen_sides_margin_half"
-        android:scaleType="fitXY"
-        android:src="@drawable/x_button" />
+<!--    <ImageView-->
+<!--        android:id="@+id/mCloseBtn"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="@dimen/screen_sides_margin"-->
+<!--        android:layout_marginEnd="@dimen/screen_sides_margin_half"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/x_button" />-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/mPager"

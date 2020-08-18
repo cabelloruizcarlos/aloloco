@@ -11,13 +11,14 @@ import androidx.viewpager.widget.ViewPager
 import es.ccrr.aloloco.R
 import es.ccrr.aloloco.ui.MainActivity
 import es.ccrr.aloloco.ui.base.BaseActivity
-import es.ccrr.aloloco.ui.login.login_page.LoginPageContract
 import es.ccrr.aloloco.ui.login.login_page.LoginPageFragment
 import es.ccrr.aloloco.util.Constants
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity: BaseActivity(), LoginActivityContract.LoginActivityView {
+class LoginActivity : BaseActivity(), LoginActivityContract.LoginActivityView {
+
     private lateinit var presenter: LoginActivityPresenter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,7 @@ class LoginActivity: BaseActivity(), LoginActivityContract.LoginActivityView {
 
         presenter = LoginActivityPresenter(this, intent)
     }
+
 
     override fun setLayout(isLoginLayoutShown: Boolean) {
 
@@ -70,25 +72,21 @@ class LoginActivity: BaseActivity(), LoginActivityContract.LoginActivityView {
             }
         })
 
-        mCloseBtn.setOnClickListener { presenter.onClicked(R.id.mCloseBtn) }
+//        mCloseBtn.setOnClickListener { presenter.onClicked(R.id.mCloseBtn) }
         mTerms.setOnClickListener { presenter.onClicked(R.id.mTerms) }
         mPolicy.setOnClickListener { presenter.onClicked(R.id.mPolicy) }
     }
 
+
     override fun onBackPressed() {
-        // TODO: Handle the back button functionality
-        presenter.onClicked(R.id.mCloseBtn)
+        goToNextScreen()
     }
 
-    fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, fragment)
-            .commit()
-    }
 
     override fun loadUrl(url: String) {
         launchBrowser(url)
     }
+
 
     override fun goToNextScreen() {
 
@@ -101,6 +99,7 @@ class LoginActivity: BaseActivity(), LoginActivityContract.LoginActivityView {
         startActivity(intent)
         finish()
     }
+
 
     class LoginTabsAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 

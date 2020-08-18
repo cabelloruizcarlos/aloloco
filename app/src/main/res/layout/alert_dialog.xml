@@ -6,19 +6,19 @@
     android:background="@drawable/custom_alert_shape"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <es.ccrr.aloloco.ui.components.CustomTextView
         android:id="@+id/alert_dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/screen_sides_margin"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
-        android:lineSpacingExtra="5dp"
-        android:gravity="center"
-        android:textSize="26sp"/>
+        android:textSize="26sp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <es.ccrr.aloloco.ui.components.CustomTextView
         android:id="@+id/alert_dialog_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_marginBottom="@dimen/screen_sides_margin"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,21 +37,28 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <es.ccrr.aloloco.ui.components.CustomButton
             android:id="@+id/alert_dialog_first_btn"
-            style="@style/WhiteButton"
             android:layout_width="0dp"
-            android:textAllCaps="true"
+            android:layout_height="@dimen/button_height"
             android:layout_marginEnd="@dimen/list_item_margin"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary" />
+            android:background="@drawable/white_button"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <es.ccrr.aloloco.ui.components.CustomButton
             android:id="@+id/alert_dialog_second_btn"
-            style="@style/WhiteButton"
             android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
             android:layout_marginStart="@dimen/list_item_margin"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary" />
+            android:background="@drawable/white_button"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
     </LinearLayout>
 </LinearLayout>

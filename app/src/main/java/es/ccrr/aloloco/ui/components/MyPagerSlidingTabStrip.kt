@@ -1,4 +1,4 @@
-package es.ccrr.aloloco.ui.Views
+package es.ccrr.aloloco.ui.components
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi

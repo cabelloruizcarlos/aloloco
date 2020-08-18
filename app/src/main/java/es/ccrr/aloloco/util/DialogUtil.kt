@@ -13,23 +13,9 @@ object DialogUtil {
         Toast.makeText(activity, message, length).show()
     }
 
-    fun showAlert(
-        activity: AppCompatActivity,
-        title: String,
-        message: String,
-        firstButtonCopy: String,
-        secondButtonCopy: String,
-        forceAnswer: Boolean,
-        firstCallback: AlertDialogCallback?,
-        secondaryCallback: AlertDialogCallback?
-    ) {
-        val dialog = CustomAlertDialog.newInstance(
-            activity,
-            title,
-            message,
-            firstButtonCopy,
-            secondButtonCopy
-        )
+    fun showAlert(activity: AppCompatActivity, title: String, message: String, firstButtonCopy: String, secondButtonCopy: String, forceAnswer: Boolean, firstCallback: AlertDialogCallback?, secondaryCallback: AlertDialogCallback?) {
+
+        val dialog = CustomAlertDialog.newInstance(activity, title, message, firstButtonCopy, secondButtonCopy)
 
         dialog.setFirstButtonListener(firstCallback)
         dialog.setSecondaryButtonListener(secondaryCallback)

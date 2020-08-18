@@ -8,20 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="PrimaryButton" parent="AppTheme">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/button_height</item>
-        <item name="android:background">@drawable/primary_button</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="WhiteButton" parent="PrimaryButton">
-        <item name="android:background">@drawable/white_button</item>
-    </style>
-
     <declare-styleable name="custom_view">
         <attr name="custom_font" format="string" />
+
+        <attr name="text" format="string" />
+        <attr name="inputType" format="string" />
     </declare-styleable>
 
     <declare-styleable name="PagerSlidingTabStrip">

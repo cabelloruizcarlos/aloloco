@@ -7,4 +7,8 @@
     <!--MyPagerSlidingTabStrip-->
     <color name="psts_background_tab_pressed">#1AFFFFFF</color>
     <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+
+    <!--CUSTOM VIEWS-->
+    <color name="login_dob">#6C0909</color>
+
 </resources>

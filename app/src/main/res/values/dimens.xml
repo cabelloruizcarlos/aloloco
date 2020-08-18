@@ -5,9 +5,15 @@
     <dimen name="screen_sides_margin">16dip</dimen>
 
     <dimen name="list_item_margin">10dip</dimen>
+    <dimen name="list_item_margin_double">20dip</dimen>
 
     <!--BUTTON-->
     <dimen name="button_height">50dip</dimen>
     <dimen name="drawable_button_stroke">2dip</dimen>
+    <dimen name="login_tab_text_size">18sp</dimen>
+
+    <!--LOGIN BUTTON-->
+    <dimen name="icon_error_width">25dp</dimen>
+    <dimen name="icon_error_height">20dp</dimen>
 
 </resources>

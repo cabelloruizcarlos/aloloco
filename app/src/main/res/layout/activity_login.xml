@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark">
+
+    <es.ccrr.aloloco.ui.components.MyPagerSlidingTabStrip
+        android:id="@+id/mTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/screen_sides_margin"
+        android:layout_marginBottom="@dimen/screen_sides_margin"
+        android:background="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/mCloseBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/screen_sides_margin"
+        android:layout_marginEnd="@dimen/screen_sides_margin_half"
+        android:scaleType="fitXY"
+        android:src="@drawable/x_button" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/login_page_footer"
+        android:layout_below="@+id/mTabs"
+        android:layout_marginTop="@dimen/list_item_margin"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/login_page_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <es.ccrr.aloloco.ui.components.CustomTextView
+            android:id="@+id/mTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Aqui van los terms"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            custom:custom_font="GillSans-SemiBold.ttf" />
+
+        <es.ccrr.aloloco.ui.components.CustomTextView
+            android:id="@+id/mPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/list_item_margin_double"
+            android:gravity="center"
+            android:text="Aqui va la policy"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            custom:custom_font="GillSans-SemiBold.ttf" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Aloloco</string>
+
+    /* Error messages */
+    <string name="error_offline">Necesitas estar on line para acceder. Comprueba tu conexion y inténtalo denuevo</string>
+
+    /* Login */
+    <string name="login_join_title">UNETE</string>
+    <string name="login_login_title">LOGIN</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_forgot_password">Recordar Password</string>
+    <string name="login_password_info">8 caracteres mínimo</string>
+    <!--Error Message-->
+    <string name="login_email_info">Introduce una dirección de email valida</string>
+    <string name="login_password_err_info">Introduzca una contraseña válida de 8 caracteres o mas</string>
+    <string name="login_dob_info">Fecha de nacimiento inválida - DD/MM/AAAA</string>
+    <!--PROFILE-->
+    <string name="wrong_profile_input">El valor introducido no es válido</string>
+
 </resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "526258618869",
+    "firebase_url": "https://aloloco-9963e.firebaseio.com",
+    "project_id": "aloloco-9963e",
+    "storage_bucket": "aloloco-9963e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526258618869:android:3fac796cb0b8a7dd1420bc",
+        "android_client_info": {
+          "package_name": "es.ccrr.aloloco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526258618869-d5h8m8hi8j6fl1n639d5nl734t7v1ov0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrb1u7PFZmaO8gxYBMTjcxVlWkmFDyDh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526258618869-d5h8m8hi8j6fl1n639d5nl734t7v1ov0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import es.ccrr.aloloco.util.AlertDialogCallback
-import es.ccrr.aloloco.util.DialogUtil
-import es.ccrr.aloloco.util.Util
+import es.ccrr.aloloco.engine.util.AlertDialogCallback
+import es.ccrr.aloloco.engine.util.DialogUtil
+import es.ccrr.aloloco.engine.util.Util
 
 open class BaseActivity : AppCompatActivity() {
 

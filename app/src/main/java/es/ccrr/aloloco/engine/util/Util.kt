@@ -1,10 +1,9 @@
-package es.ccrr.aloloco.util
+package es.ccrr.aloloco.engine.util
 
 import android.content.Context
 import android.graphics.Point
 import android.net.ConnectivityManager
 import android.view.WindowManager
-import es.ccrr.aloloco.ui.base.BaseActivity
 
 
 class Util {

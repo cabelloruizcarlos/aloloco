@@ -12,7 +12,7 @@ import es.ccrr.aloloco.R
 import es.ccrr.aloloco.ui.MainActivity
 import es.ccrr.aloloco.ui.base.BaseActivity
 import es.ccrr.aloloco.ui.login.login_page.LoginPageFragment
-import es.ccrr.aloloco.util.Constants
+import es.ccrr.aloloco.engine.util.Constants
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginActivityContract.LoginActivityView {

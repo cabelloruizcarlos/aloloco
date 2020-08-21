@@ -2,7 +2,7 @@ package es.ccrr.aloloco.ui.base
 
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
-import es.ccrr.aloloco.util.AlertDialogCallback
+import es.ccrr.aloloco.engine.util.AlertDialogCallback
 
 open class BaseFragment : Fragment() {
 

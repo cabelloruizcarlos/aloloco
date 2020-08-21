@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import es.ccrr.aloloco.R
-import es.ccrr.aloloco.ui.base.BaseActivity
 import es.ccrr.aloloco.ui.base.BaseFragment
 import es.ccrr.aloloco.ui.login.LoginActivity
-import es.ccrr.aloloco.util.Util
+import es.ccrr.aloloco.engine.util.Util
 import kotlinx.android.synthetic.main.login_page.*
 
 class LoginPageFragment : BaseFragment(), LoginPageContract.LoginPageView, LoginActivity.LoginPagePagerContract {

@@ -2,9 +2,8 @@ package es.ccrr.aloloco.ui.login.login_page
 
 import android.os.Bundle
 import android.text.TextUtils
-import es.ccrr.aloloco.ui.base.BaseActivity
-import es.ccrr.aloloco.util.Constants
-import es.ccrr.aloloco.util.Util
+import es.ccrr.aloloco.engine.util.Constants
+import es.ccrr.aloloco.engine.util.Util
 
 class LoginPagePresenter(private val view: LoginPageContract.LoginPageView,private val arguments: Bundle?):LoginPageContract.LoginPagePresenter {
 

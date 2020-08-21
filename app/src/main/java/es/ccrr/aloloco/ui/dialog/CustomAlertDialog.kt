@@ -11,7 +11,7 @@ import android.view.Window
 import android.widget.LinearLayout
 import androidx.core.content.res.ResourcesCompat
 import es.ccrr.aloloco.R
-import es.ccrr.aloloco.util.AlertDialogCallback
+import es.ccrr.aloloco.engine.util.AlertDialogCallback
 import kotlinx.android.synthetic.main.alert_dialog.*
 
 class CustomAlertDialog(context: Context, args: Array<String>): Dialog(context) {

@@ -2,7 +2,7 @@ package es.ccrr.aloloco.ui.login
 
 import android.content.Intent
 import es.ccrr.aloloco.R
-import es.ccrr.aloloco.util.Constants
+import es.ccrr.aloloco.engine.util.Constants
 
 class LoginActivityPresenter(private val view: LoginActivityContract.LoginActivityView, intent: Intent) :
     LoginActivityContract.LoginActivityPresenter {

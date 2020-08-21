@@ -1,4 +1,4 @@
-package es.ccrr.aloloco.util
+package es.ccrr.aloloco.engine.util
 
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity

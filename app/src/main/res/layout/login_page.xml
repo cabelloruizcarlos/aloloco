@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="@string/login_join_title"
             android:id="@+id/loginLabel"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <es.ccrr.aloloco.ui.components.CustomEditText
             android:id="@+id/emailView"
@@ -42,7 +42,7 @@
             android:layout_marginTop="@dimen/list_item_margin"
             android:layout_marginBottom="@dimen/list_item_margin"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:background="@drawable/white_button"
             android:gravity="center" />
 

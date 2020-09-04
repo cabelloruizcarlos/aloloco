@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark">
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
 
     <es.ccrr.aloloco.ui.components.MyPagerSlidingTabStrip
         android:id="@+id/mTabs"
@@ -12,17 +12,6 @@
         android:layout_marginTop="@dimen/screen_sides_margin"
         android:layout_marginBottom="@dimen/screen_sides_margin"
         android:background="@android:color/transparent" />
-
-<!--    <ImageView-->
-<!--        android:id="@+id/mCloseBtn"-->
-<!--        android:layout_width="25dp"-->
-<!--        android:layout_height="25dp"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_marginTop="@dimen/screen_sides_margin"-->
-<!--        android:layout_marginEnd="@dimen/screen_sides_margin_half"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/x_button" />-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/mPager"
@@ -48,7 +37,7 @@
             android:gravity="center"
             android:text="Aqui van los terms"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="18sp"
             custom:custom_font="GillSans-SemiBold.ttf" />
 
         <es.ccrr.aloloco.ui.components.CustomTextView
@@ -59,7 +48,7 @@
             android:gravity="center"
             android:text="Aqui va la policy"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="18sp"
             custom:custom_font="GillSans-SemiBold.ttf" />
 
     </LinearLayout>

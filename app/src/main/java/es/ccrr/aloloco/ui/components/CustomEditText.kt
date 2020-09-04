@@ -62,7 +62,7 @@ class CustomEditText @JvmOverloads constructor(context: Context, attributeSet: A
         when (inputType) {
             "date" -> {
                 customEditTextInfo.text = context.getString(R.string.login_dob_info)
-                customEditTextInfo.setTextColor(ResourcesCompat.getColor(resources, R.color.login_dob, null))
+                customEditTextInfo.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccent, null))
                 customEditTextInfo.visibility = INVISIBLE
             }
             "textEmailAddress" -> {

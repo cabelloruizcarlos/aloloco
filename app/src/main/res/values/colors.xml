@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#169FDC</color>
+    <color name="colorPrimaryDark">#015D94</color>
+    <color name="colorAccent">#FAA333</color>
 
     <!--MyPagerSlidingTabStrip-->
     <color name="psts_background_tab_pressed">#1AFFFFFF</color>
     <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
-
-    <!--CUSTOM VIEWS-->
-    <color name="login_dob">#6C0909</color>
 
 </resources>

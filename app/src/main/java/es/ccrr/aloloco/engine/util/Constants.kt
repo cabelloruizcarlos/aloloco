@@ -2,7 +2,7 @@ package es.ccrr.aloloco.engine.util
 
 object Constants {
 
-    const val BASE_URL = "TO BE DEFINED"
+    const val BASE_URL = "http://google.es"
     const val TERMS_URL = "http://google.es"
     const val POLICY_URL = "http://google.es"
 

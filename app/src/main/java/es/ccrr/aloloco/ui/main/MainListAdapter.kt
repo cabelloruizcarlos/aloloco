@@ -15,11 +15,11 @@ class MainListAdapter : RecyclerView.Adapter<MainListAdapter.MainListHolder>() {
     }
 
     override fun onBindViewHolder(holder: MainListAdapter.MainListHolder, position: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return 0
     }
 
     class MainListHolder(itemView: View): RecyclerView.ViewHolder(itemView)

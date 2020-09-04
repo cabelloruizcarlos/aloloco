@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import es.ccrr.aloloco.R
-import es.ccrr.aloloco.ui.MainActivity
+import es.ccrr.aloloco.ui.main.MainActivity
 import es.ccrr.aloloco.ui.base.BaseActivity
 import es.ccrr.aloloco.ui.login.login_page.LoginPageFragment
 import es.ccrr.aloloco.engine.util.Constants

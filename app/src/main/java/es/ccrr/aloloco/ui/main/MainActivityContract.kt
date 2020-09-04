@@ -1,4 +1,4 @@
-package es.ccrr.aloloco.ui
+package es.ccrr.aloloco.ui.main
 
 interface MainActivityContract {
 

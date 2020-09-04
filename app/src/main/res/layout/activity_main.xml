@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/screen_sides_margin">
 
-    <TextView
+    <es.ccrr.aloloco.ui.components.CustomTextView
+        android:id="@+id/main_title"
+        style="@style/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_sides_margin"
+        android:gravity="center"
+        android:text="@string/main_title"
+        android:textAllCaps="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Soy ya millonario? Y ahora?"
-        android:textColor="@android:color/black"
-        android:textSize="34sp" />
+        android:background="@color/colorPrimaryDark"
+        android:elevation="5dp"
+        android:layout_below="@+id/main_title" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainProfileBtn"
+        android:layout_width="@dimen/floatingBtn_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="10dp"
+        app:fabCustomSize="@dimen/floatingBtn_size"
+        android:src="@drawable/ic_white_user"
+        android:layout_height="@dimen/floatingBtn_size" />
 
 </RelativeLayout>

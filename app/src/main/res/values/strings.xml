@@ -19,5 +19,6 @@
     <string name="login_dob_info">Fecha de nacimiento inválida - DD/MM/AAAA</string>
     <!--PROFILE-->
     <string name="wrong_profile_input">El valor introducido no es válido</string>
+    <string name="main_title">Tus inversiones</string>
 
 </resources>

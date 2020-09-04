@@ -11,6 +11,7 @@
     <dimen name="button_height">50dip</dimen>
     <dimen name="drawable_button_stroke">2dip</dimen>
     <dimen name="login_tab_text_size">18sp</dimen>
+    <dimen name="floatingBtn_size">50dp</dimen>
 
     <!--LOGIN BUTTON-->
     <dimen name="icon_error_width">25dp</dimen>

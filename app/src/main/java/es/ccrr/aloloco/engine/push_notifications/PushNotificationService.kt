@@ -1,4 +1,4 @@
-package es.ccrr.aloloco.engine
+package es.ccrr.aloloco.engine.push_notifications
 
 import android.content.Intent
 import android.util.Log
